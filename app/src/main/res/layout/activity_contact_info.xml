@@ -1,0 +1,438 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ContactInfo"
+    android:background="@color/white" >
+
+    <TextView
+        android:id="@+id/ppl_username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_toLeftOf="@+id/ppl_picture"
+        android:ellipsize="end"
+        android:fontFamily="sans-serif"
+        android:text="@string/default_contact_name"
+        android:textColor="@color/dark_grey"
+        android:textSize="28sp"
+        android:maxLines="1" />
+
+    <TableLayout
+        android:id="@+id/ppl_nick_table"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ppl_username" >
+
+        <TableRow>
+            <TextView
+                android:id="@+id/ppl_nick_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ppl_username"
+                android:layout_marginLeft="8dp"
+                android:text="nick:"
+                android:textColor="@color/dark_grey"
+                android:textSize="20sp"
+                android:fontFamily="sans-serif"
+                android:layout_alignParentLeft="true" />
+
+            <TextView
+                android:id="@+id/ppl_nick"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:text="@string/default_contact_nick"
+                android:textSize="20sp"
+                android:fontFamily="sans-serif-light"
+                android:textStyle="italic" />
+
+            <EditText
+                android:id="@+id/ppl_nick_edit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ppl_username"
+                android:layout_toRightOf="@id/ppl_nick_label"
+                android:layout_marginLeft="4dp"
+                android:hint="@string/edit_nick_hint"
+                android:textColor="@color/dark_grey"
+                android:textSize="16sp"
+                android:singleLine="true"
+                android:fontFamily="sans-serif-light"
+                android:visibility="gone" />
+        </TableRow>
+
+    </TableLayout>
+
+    <ImageView
+        android:id="@+id/ppl_picture"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/default_contact_pic"
+        android:contentDescription="@string/contact_picture_desc" />
+    
+    <TextView
+        android:id="@+id/ppl_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ppl_nick_table"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="4dp"
+        android:layout_marginLeft="8dp"
+        android:text="@string/key_valid_since"
+        android:textColor="@color/dark_grey"
+        android:textSize="16sp"
+        android:fontFamily="sans-serif"
+        android:layout_alignParentLeft="true" />
+    
+    <TextView
+        android:id="@+id/ppl_status_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ppl_nick_table"
+        android:layout_toRightOf="@+id/ppl_status"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="4dp"
+        android:text="@string/default_date"
+        android:textColor="@color/dark_blue"
+        android:textSize="16sp"
+        android:fontFamily="sans-serif-light"
+        android:textStyle="italic" />
+
+    <RelativeLayout
+        android:id="@+id/ppl_contact_buttons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ppl_status"
+        android:layout_marginTop="16dp" >
+
+        <RelativeLayout
+            android:id="@+id/ppl_edit_layout"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"
+            android:clickable="true"
+            android:background="@drawable/text_blue_highlight" >
+
+            <View
+                android:id="@+id/ppl_edit_delimiter"
+                android:background="@color/light_grey_background"
+                android:layout_width="match_parent"
+                android:layout_height="1dp" />
+
+            <ImageView
+                android:id="@+id/ppl_edit_icon"
+                android:src="@drawable/ic_action_edit"
+                android:layout_alignParentLeft="true"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:padding="4dp"
+                android:contentDescription="@string/edit_icon" />
+
+            <TextView
+                android:id="@+id/ppl_edit_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/ppl_edit_icon"
+                android:layout_marginLeft="8dp"
+                android:text="@string/edit_contact"
+                android:textColor="@color/light_grey_text"
+                android:textSize="16sp"
+                android:fontFamily="sans-serif"
+                android:layout_centerInParent="true" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/ppl_new_key_layout"
+            android:layout_below="@+id/ppl_edit_layout"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"
+            android:clickable="true"
+            android:background="@drawable/text_blue_highlight" >
+
+            <View
+                android:id="@+id/ppl_new_key_delimiter"
+                android:background="@color/light_grey_background"
+                android:layout_width="match_parent"
+                android:layout_height="1dp" />
+
+            <ImageView
+                android:id="@+id/ppl_new_key_icon"
+                android:src="@drawable/ic_action_cut"
+                android:layout_alignParentLeft="true"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:padding="4dp"
+                android:contentDescription="@string/delete_msg_icon" />
+
+            <TextView
+                android:id="@+id/ppl_new_key_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/ppl_new_key_icon"
+                android:layout_marginLeft="8dp"
+                android:text="@string/new_key"
+                android:textColor="@color/light_grey_text"
+                android:textSize="16sp"
+                android:fontFamily="sans-serif"
+                android:layout_centerInParent="true" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/ppl_block_layout"
+            android:layout_below="@+id/ppl_new_key_layout"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"
+            android:clickable="true"
+            android:background="@drawable/text_blue_highlight" >
+
+            <View
+                android:id="@+id/ppl_block_delimeter"
+                android:background="@color/light_grey_background"
+                android:layout_width="match_parent"
+                android:layout_height="1dp" />
+
+            <ImageView
+                android:id="@+id/ppl_block_icon"
+                android:src="@drawable/ic_action_cut"
+                android:layout_alignParentLeft="true"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:padding="4dp"
+                android:contentDescription="@string/delete_msg_icon" />
+
+            <TextView
+                android:id="@+id/ppl_block_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/ppl_block_icon"
+                android:layout_marginLeft="8dp"
+                android:text="@string/block_contact"
+                android:textColor="@color/light_grey_text"
+                android:textSize="16sp"
+                android:fontFamily="sans-serif"
+                android:layout_centerInParent="true" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/ppl_unblock_layout"
+            android:layout_below="@+id/ppl_edit_layout"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"
+            android:clickable="true"
+            android:background="@drawable/text_blue_highlight"
+            android:visibility="invisible" >
+
+            <View
+                android:id="@+id/ppl_unblock_delimeter"
+                android:background="@color/light_grey_background"
+                android:layout_width="match_parent"
+                android:layout_height="1dp" />
+
+            <ImageView
+                android:id="@+id/ppl_unblock_icon"
+                android:src="@drawable/ic_action_cut"
+                android:layout_alignParentLeft="true"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:padding="4dp"
+                android:contentDescription="@string/delete_msg_icon" />
+
+            <TextView
+                android:id="@+id/ppl_unblock_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/ppl_unblock_icon"
+                android:layout_marginLeft="8dp"
+                android:text="@string/unblock_contact"
+                android:textColor="@color/light_grey_text"
+                android:textSize="16sp"
+                android:fontFamily="sans-serif"
+                android:layout_centerInParent="true" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/ppl_rmvmsg_layout"
+            android:layout_below="@+id/ppl_block_layout"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"
+            android:clickable="true"
+            android:background="@drawable/text_blue_highlight" >
+
+            <View
+                android:id="@+id/ppl_rmvmsg_delimiter"
+                android:background="@color/light_grey_background"
+                android:layout_width="match_parent"
+                android:layout_height="1dp" />
+
+            <ImageView
+                android:id="@+id/ppl_rmvmsg_icon"
+                android:src="@drawable/ic_action_cut"
+                android:layout_alignParentLeft="true"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:padding="4dp"
+                android:contentDescription="@string/delete_msg_icon" />
+
+            <TextView
+                android:id="@+id/ppl_rmvmsg_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/ppl_rmvmsg_icon"
+                android:layout_marginLeft="8dp"
+                android:text="@string/remove_messages"
+                android:textColor="@color/light_grey_text"
+                android:textSize="16sp"
+                android:fontFamily="sans-serif"
+                android:layout_centerInParent="true" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/ppl_remove_layout"
+            android:layout_below="@+id/ppl_rmvmsg_layout"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"
+            android:clickable="true"
+            android:background="@drawable/text_blue_highlight" >
+
+            <View
+                android:id="@+id/ppl_remove_delimiter"
+                android:background="@color/light_grey_background"
+                android:layout_width="match_parent"
+                android:layout_height="1dp" />
+
+            <ImageView
+                android:id="@+id/ppl_remove_icon"
+                android:src="@drawable/ic_action_trash"
+                android:layout_alignParentLeft="true"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:padding="4dp"
+                android:contentDescription="@string/delete_all_icon" />
+
+            <TextView
+                android:id="@+id/ppl_remove_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/ppl_remove_icon"
+                android:layout_marginLeft="8dp"
+                android:text="@string/remove_contact"
+                android:textColor="@color/light_grey_text"
+                android:textSize="16sp"
+                android:fontFamily="sans-serif"
+                android:layout_centerInParent="true" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/ppl_changes_buttons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ppl_status"
+        android:layout_marginTop="16dp"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:id="@+id/ppl_save_changes_layout"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"
+            android:clickable="true"
+            android:background="@drawable/text_blue_highlight" >
+
+            <View
+                android:id="@+id/ppl_save_changes_delimiter"
+                android:background="@color/light_grey_background"
+                android:layout_width="match_parent"
+                android:layout_height="1dp" />
+
+            <ImageView
+                android:id="@+id/ppl_save_changes_icon"
+                android:src="@drawable/ic_action_tick"
+                android:layout_alignParentLeft="true"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:padding="4dp"
+                android:contentDescription="@string/edit_cancel_icon" />
+
+            <TextView
+                android:id="@+id/ppl_save_changes_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/ppl_save_changes_icon"
+                android:layout_marginLeft="8dp"
+                android:text="@string/save_changes"
+                android:textColor="@color/light_grey_text"
+                android:textSize="16sp"
+                android:fontFamily="sans-serif"
+                android:layout_centerInParent="true" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/ppl_edit_cancel_layout"
+            android:layout_below="@+id/ppl_save_changes_layout"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"
+            android:clickable="true"
+            android:background="@drawable/text_blue_highlight" >
+
+            <View
+                android:id="@+id/ppl_edit_cancel_delimiter"
+                android:background="@color/light_grey_background"
+                android:layout_width="match_parent"
+                android:layout_height="1dp" />
+
+            <ImageView
+                android:id="@+id/ppl_edit_cancel_icon"
+                android:src="@drawable/ic_action_cancel"
+                android:layout_alignParentLeft="true"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:padding="4dp"
+                android:contentDescription="@string/edit_cancel_icon" />
+
+            <TextView
+                android:id="@+id/ppl_edit_cancel_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/ppl_edit_cancel_icon"
+                android:layout_marginLeft="8dp"
+                android:text="@string/cancel_edit"
+                android:textColor="@color/light_grey_text"
+                android:textSize="16sp"
+                android:fontFamily="sans-serif"
+                android:layout_centerInParent="true" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,30 @@
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:enigma="http://schemas.android.com/apk/res-auto" >
+
+    <group>
+        <item
+            android:id="@+id/action_new_conversation"
+            android:icon="@drawable/ic_action_new_conversation"
+            android:orderInCategory="1"
+            enigma:showAsAction="ifRoom"
+            android:title="@string/action_new_conversation"/>
+
+        <item android:id="@+id/action_add_contact"
+              android:icon="@drawable/ic_action_add_person"
+              android:title="@string/add_contact"
+              android:orderInCategory="2"
+              enigma:showAsAction="ifRoom" />
+    </group>
+
+    <item
+        android:id="@+id/help"
+        enigma:showAsAction="never"
+        android:title="@string/help"/>
+
+    <item
+        android:id="@+id/action_settings"
+        enigma:showAsAction="never"
+        android:title="@string/action_settings"/>
+
+</menu>

@@ -1,0 +1,63 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_grey_background"
+    tools:context=".MessageScreen" >
+
+    <ListView
+        android:id="@+id/message_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@null"
+		android:dividerHeight="0dp"
+        android:listSelector="@color/transparent"
+		android:layout_above="@+id/message_new" >
+    </ListView>
+    
+    <RelativeLayout
+        android:id="@+id/message_new"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/white"
+        android:layout_alignParentBottom="true" >
+        
+        <View 
+            android:id="@+id/message_text_bar"
+        	android:background="@color/dark_grey_background"
+        	android:layout_alignParentTop="true"
+        	android:layout_width="fill_parent"
+        	android:layout_height="1dp"/>
+        
+       	<EditText
+       	    android:id="@+id/message_input"
+       	    android:layout_width="match_parent"
+       	    android:layout_height="40dp"
+       	    android:layout_alignParentLeft="true"
+       	    android:layout_alignParentBottom="true"
+       	    android:layout_marginLeft="4dp"
+       	    android:layout_marginBottom="4dp"
+       	    android:gravity="center_vertical"
+       	    android:layout_toLeftOf="@+id/message_send"
+       	    android:fontFamily="sans-serif-light"
+       	    android:hint="@string/message_hint"
+       	    android:textSize="16sp"
+       	    android:textColor="@color/dark_grey"
+       	    android:inputType="textCapSentences|textMultiLine|" >
+        </EditText>
+        
+        <ImageView 
+            android:id="@+id/message_send"
+            android:layout_alignParentRight="true"
+            android:layout_width="60dp"
+            android:scaleType="fitXY"
+            android:layout_height="48dp"
+            android:src="@drawable/ic_action_send"
+            android:clickable="true"
+            android:background="@drawable/background_selector"
+            android:padding="4dp"
+            android:contentDescription="@string/message_send_icon" />
+        
+    </RelativeLayout>
+
+</RelativeLayout>

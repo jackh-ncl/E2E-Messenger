@@ -1,0 +1,16 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:e2e="http://schemas.android.com/apk/res-auto">
+
+    <!--<item
+        android:id="@+id/remove_all_chats"
+        android:orderInCategory="99"
+        android:showAsAction="never"
+        android:title="@string/remove_messages"/>-->
+    
+    <item
+        android:id="@+id/action_settings"
+        android:orderInCategory="100"
+        e2e:showAsAction="never"
+        android:title="@string/action_settings"/>
+
+</menu>

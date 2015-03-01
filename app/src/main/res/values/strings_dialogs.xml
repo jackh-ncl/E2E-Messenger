@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="regHelpTitle">Thank you for installing</string>
+    <string name="regHelpBody">
+        To start using E2E Messenger, please register a unique username that other users can use to
+        identify you by (must be 3 or more alphanumeric characters, can include non-repeating underscores
+        and dashes). \n\nYou must also select a password which will allow you to retain your username should you
+        uninstall the app or wish to use it on another device (must be 6 or more characters). MAKE SURE YOU
+        DO NOT LOSE THIS PASSWORD, AS THERE IS CURRENTLY NO PASSWORD RECOVERY FEATURE (I plan to add this in
+        a future update).
+    </string>
+
+    <string name="addContactTitle">Adding a new contact</string>
+    <string name="addContactBody">
+        To add a new contact, press the add contact button on the action bar. \n\nNext you should
+        type in your contact\'s username and the password that you agreed upon. Once you have done
+        this, click \'send\' and the key exchange will be carried out automatically. \n\nIf the key
+        exchange is successful then the contact\'s key status will be set to \'valid\', and you can then
+        begin chatting securely by clicking the new message button (also on the action bar).
+    </string>
+
+</resources>

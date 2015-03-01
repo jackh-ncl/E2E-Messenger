@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="server_url">https://secure-chat-android.appspot.com/</string>
+
+    <string name="app_name">E2E Messenger</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_new_conversation">New Conversation</string>
+    <string name="title_section1">Conversations</string>
+    <string name="title_section2">Contacts</string>
+    <string name="start_new_chat">+	Start a Secure Chat</string>
+    <string name="add_new_contact">+	Add Person From Contacts</string>
+    <string name="password_welcome">Engima</string>
+    <string name="password_secureim">Secure\nInstant Messaging</string>
+    <string name="password_enterpin">Please enter your pin</string>
+    <string name="enter_username">Please enter a username</string>
+    <string name="enter_recaptcha">Enter the words above</string>
+    <string name="enter_password">Enter password</string>
+    <string name="sign_in">Sign In</string>
+    <string name="register">Register</string>
+    <string name="retry">Retry?</string>
+    <string name="message_hint">Type message</string>
+    <string name="key_valid_since">Valid since:</string>
+    <string name="messages">Messages:</string>
+    <string name="edit_contact">Edit contact</string>
+    <string name="new_key">Request new key</string>
+    <string name="cancel_edit">Cancel</string>
+    <string name="save_changes">Save changes</string>
+    <string name="remove_messages">Delete messages</string>
+    <string name="block_contact">Block contact</string>
+    <string name="unblock_contact">Unblock contact</string>
+    <string name="remove_contact">Delete contact</string>
+    <string name="send_feedback">Send feedback</string>
+    <string name="title_activity_inform_contact">Inform Contact</string>
+    <string name="title_activity_contact_list">Contact List</string>
+    <string name="title_activity_settings">Settings</string>
+    <string name="no_conversations">No conversations.</string>
+    <string name="no_contacts">No contacts.</string>
+
+    <!-- Menu Items -->
+    <string name="status_online">Online</string>
+    <string name="status_offline">Offline</string>
+    <string name="help_dialer">Help</string>
+    <string name="refresh">Refresh</string>
+    <string name="add_contact">Add contact</string>
+    <string name="add_blocked_user">Block user</string>
+    <string name="help">Help</string>
+
+    <!-- Defaults -->
+    <string name="default_contact_name">John Smith</string>
+    <string name="default_contact_nick">john</string>
+    <string name="edit_nick_hint">New nickname</string>
+    <string name="default_message_time">10:00</string>
+    <string name="default_sent_time">9:50AM - 01/03/2013</string>
+    <string name="default_message">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</string>
+    <string name="status_label">Key status:</string>
+    <string name="default_status">pending</string>
+    <string name="default_date">01/03/2013</string>
+    <string name="default_message_no">285</string>
+
+    <!-- Descriptions -->
+    <string name="contact_picture_desc">Contact Picture</string>
+    <string name="dialer_backspace_desc">Backspace Image to Remove Last Number</string>
+    <string name="icon_large">The application icon</string>
+    <string name="message_send_icon">Icon to press to send the message</string>
+    <string name="edit_icon">Edit Icon</string>
+    <string name="edit_cancel_icon">Cancel Icon</string>
+    <string name="delete_msg_icon">Delete Messages Icon</string>
+    <string name="delete_all_icon">Delete Contact and Messages Icon</string>
+
+    <!-- Numbers (Dialer) -->
+    <string name="zero">0</string>
+    <string name="one">1</string>
+    <string name="two">2</string>
+    <string name="three">3</string>
+    <string name="four">4</string>
+    <string name="five">5</string>
+    <string name="six">6</string>
+    <string name="seven">7</string>
+    <string name="eight">8</string>
+    <string name="nine">9</string>
+    <string name="dialer_plus">+</string>
+    <string name="dialer_clear">CLR</string>
+    <string name="create_new">Create New Contact</string>
+    <string name="title_activity_lock_screen">CryptoTalk</string>
+    <string name="hello_world">Hello world!</string>
+
+    <!-- Settings -->
+    <string name="user">User</string>
+    <string name="user_display_name">Display name</string>
+    <string name="user_display_pic">Display picture</string>
+    <string name="user_receive_requests">Receive contact requests</string>
+    <string name="user_receive_requests_on">You are currently able to receive contact requests.</string>
+    <string name="user_receive_requests_off">You will not currently receive new contact requests.</string>
+    <string name="general">General</string>
+    <string name="security">Security</string>
+    <string name="lock_screen">Lock screen</string>
+    <string name="lock_screen_on">The lock screen is currently enabled</string>
+    <string name="lock_screen_off">The lock screen is currently disabled</string>
+    <string name="lock_screen_pin">Set pin code</string>
+    <string name="register_username">Register username</string>
+    <string name="blocked_users">Blocked users</string>
+    <string name="lock_screen_chances">Set number of retry attempts</string>
+    <string name="delete_all_data">Clear all data</string>
+    <string name="delete_all_data_desc">Erase all conversations and friends</string>
+    <string name="delete_data_dialog">Warning, accepting this will wipe all data in this application including conversations and friends lists.\n\nCryptoTalk will reset and this cannot be undone!</string>
+    <string name="delete_cancel">Cancel</string>
+    <string name="delete_clear">Clear</string>
+    <string name="notifications">Notifications</string>
+    <string name="notify_on">Notifications</string>
+    <string name="notify_on_desc">Notifications are currently enabled</string>
+    <string name="notify_off_desc">Notifications are currently disabled</string>
+    <string name="notify_ringtone">Ringtone</string>
+    <string name="notify_vibrate">Vibrate</string>
+    <string name="about_prefs">About E2E Messenger</string>
+    <string name="about">About</string>
+    <string name="about_tutorial">Tutorial</string>
+    <string name="about_attributes">Attributes</string>
+    <string name="title_activity_contact_info">Contact Info</string>
+    <string name="title_activity_blocked_users">Blocked Users</string>
+
+    <!-- Attribute Names -->
+    <string name="attr_bouncycastle">Bouncy Castle</string>
+    <string name="attr_jpake">J-PAKE</string>
+    <string name="attr_kryo">Kryo</string>
+    <string name="legal_notice">Legal Notice</string>
+
+    <!-- About CryptoTalk Information -->
+    <string name="e2e_about_all">E2E Messenger is an app.</string>
+    <string name="title_activity_attributes">Attributes</string>
+
+</resources>

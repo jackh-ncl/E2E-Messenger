@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/card_background" >
+    
+    <ImageView
+        android:id="@+id/contact_picture"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:layout_marginRight="16dp"
+        android:src="@drawable/default_contact_pic"
+        android:contentDescription="@string/contact_picture_desc" >
+    </ImageView>
+    
+    <TextView
+        android:id="@+id/contact_name_card"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@id/contact_picture"
+        android:fontFamily="sans-serif"
+        android:text="@string/default_contact_name"
+        android:textColor="@color/dark_grey"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/contact_status_label_card"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/contact_name_card"
+        android:layout_toRightOf="@id/contact_picture"
+        android:fontFamily="sans-serif"
+        android:text="@string/status_label"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/contact_status_card"
+        android:layout_marginLeft="4dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/contact_name_card"
+        android:layout_toRightOf="@id/contact_status_label_card"
+        android:fontFamily="sans-serif"
+        android:textColor="@color/dark_orange"
+        android:text="@string/default_status"
+        android:textSize="16sp" />
+
+    <ImageView
+        android:id="@+id/new_request_icon"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:layout_marginRight="3dp"
+        android:layout_marginTop="3dp"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/ic_asterisk"
+        android:visibility="gone"/>
+
+</RelativeLayout>

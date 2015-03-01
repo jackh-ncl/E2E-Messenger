@@ -1,0 +1,57 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_grey_background"
+    tools:context=".LockScreen"
+    android:gravity="center" >
+
+<ImageView
+        android:id="@+id/app_logo"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_marginLeft="18dp"
+        android:layout_marginTop="18dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/web_hi_res_512" />
+
+
+	<EditText
+	    android:id="@+id/pass_entry"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_below="@id/app_logo"
+	    android:layout_centerHorizontal="true"
+	    android:layout_marginLeft="22dp"
+	    android:layout_marginRight="22dp"
+	    android:layout_marginTop="16dp"
+	    android:ems="10"
+	    android:fontFamily="sans-serif-light"
+	    android:gravity="center_vertical|center_horizontal"
+	    android:hint="@string/password_enterpin"
+	    android:inputType="numberPassword"
+	    android:digits="1234567890"
+	    android:textStyle="italic"
+	    android:imeOptions="actionDone" >
+
+	    <requestFocus />
+	</EditText>
+	
+	<TextView
+        android:id="@+id/lockscreen_signin"
+        android:layout_width="fill_parent"
+        android:layout_height="48dp"
+        android:layout_marginRight="22dp"
+        android:layout_marginLeft="22dp"
+        android:layout_below="@+id/pass_entry"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:text="@string/sign_in"
+        android:background="@drawable/blue_rectangle"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:fontFamily="sans-serif-light"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:clickable="true" />
+
+</RelativeLayout>

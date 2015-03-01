@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory
+        android:title="@string/general">
+
+        <Preference
+            android:key="username"
+            android:inputType="text"
+            android:title="@string/register_username" />
+
+        <Preference
+            android:title="@string/blocked_users" >
+
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:targetPackage="com.e2eMessenger"
+                android:targetClass="com.e2eMessenger.BlockedUserListActivity" />
+
+        </Preference>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="@string/security">
+
+       <!-- <CheckBoxPreference
+            android:key="lockscreen_on"
+            android:defaultValue="false"
+            android:summaryOn="@string/lock_screen_on"
+            android:summaryOff="@string/lock_screen_off"
+            android:title="@string/lock_screen" />
+
+        <EditTextPreference
+            android:key="lockscreen_pin"
+            android:inputType="numberPassword"
+            android:dependency="lockscreen_on"
+            android:maxLines="1"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:title="@string/lock_screen_pin" />-->
+
+        <CheckBoxPreference
+            android:key="receive_requests"
+            android:defaultValue="true"
+            android:summaryOn="@string/user_receive_requests_on"
+            android:summaryOff="@string/user_receive_requests_off"
+            android:title="@string/user_receive_requests" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="@string/notifications">
+
+
+        <CheckBoxPreference
+            android:key="notifications"
+            android:defaultValue="true"
+            android:title="@string/pref_title_new_message_notifications" />
+
+        <RingtonePreference
+            android:key="notifications_ringtone"
+            android:defaultValue="content://settings/system/notification_sound"
+            android:dependency="notifications"
+            android:ringtoneType="notification"
+            android:title="@string/pref_title_ringtone" />
+
+        <CheckBoxPreference
+            android:key="notifications_vibrate"
+            android:defaultValue="true"
+            android:dependency="notifications"
+            android:title="@string/pref_title_vibrate" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="About">
+
+        <Preference
+            android:title="@string/about_attributes" >
+
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:targetPackage="com.e2eMessenger"
+                android:targetClass="com.e2eMessenger.AttributesActivity" />
+
+        </Preference>
+
+        <!--<EngimaDialogPreference
+            android:dialogMessage="@string/enigma_about_all"
+            android:dialogIcon="@drawable/ic_launcher"
+            android:key="about_prefs_about"
+            android:dialogTitle="@string/about_prefs"
+            android:title="@string/about" />
+
+        <PreferenceScreen
+            android:key="about_prefs_attributes"
+            android:title="@string/about_attributes"
+            android:persistent="false" >
+
+            <com.enigma.EngimaDialogPreference
+                android:title="@string/attr_bouncycastle"
+                android:dialogTitle="@string/legal_notice"
+                android:dialogMessage="@string/bouncycastle_notice"
+                android:positiveButtonText=""
+                android:negativeButtonText="" />
+
+            <Preference android:title="@string/attr_jpake" >
+                <intent android:action="android.intent.action.VIEW"
+                        android:data="http://eprint.iacr.org/2010/190.pdf" />
+            </Preference>
+
+            <com.enigma.EngimaDialogPreference
+                android:title="@string/attr_kryo"
+                android:dialogTitle="@string/legal_notice"
+                android:dialogMessage="@string/kryo_notice"
+                android:positiveButtonText=""
+                android:negativeButtonText="" />
+
+        </PreferenceScreen>-->
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

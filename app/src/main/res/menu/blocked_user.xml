@@ -1,0 +1,9 @@
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:enigma="http://schemas.android.com/apk/res-auto" >
+    <!-- Add new blocked user, should appear as action button -->
+    <item android:id="@+id/action_block_user"
+          android:icon="@android:drawable/ic_menu_add"
+          android:title="@string/add_blocked_user"
+          enigma:showAsAction="ifRoom" />
+</menu>
